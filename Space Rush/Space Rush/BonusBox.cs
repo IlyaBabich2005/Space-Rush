@@ -80,5 +80,15 @@ namespace Space_Rush
             this.skill.Play(this.owner);
             Game.GetInstanse().DespawnEntity(this);
         }
+
+        public override void UpdateDespawnState()
+        {
+            base.UpdateDespawnState();
+
+            if(owner.GetHP() <= 0)
+            {
+                this.IsReadyToDespawn(true);
+            }    
+        }
     }
 }

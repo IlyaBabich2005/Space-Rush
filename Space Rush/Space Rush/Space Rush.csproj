@@ -115,7 +115,6 @@
     <Compile Include="Skill.cs" />
     <Compile Include="SuperShot.cs" />
     <Compile Include="Vector2d.cs" />
-    <Compile Include="VectorMath.cs" />
     <Compile Include="Weapon.cs" />
     <Compile Include="WeaponBuilder.cs" />
     <Compile Include="WeaponDirector.cs" />

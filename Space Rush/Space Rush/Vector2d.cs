@@ -21,6 +21,7 @@ namespace Space_Rush
             this.y = y;
 
             this.length = (float)Math.Sqrt(this.x * this.x + this.y * this.y);
+
             if(this.y > 0)
             {
                 this.angle = (float)Math.Acos(this.x / this.length);

@@ -50,16 +50,6 @@ namespace Space_Rush
             }
         }
 
-        public override void UpdateDespawnState()
-        {
-            if(!CollisionDetector.IsApperThanLowerWindowBound(this) 
-                || !CollisionDetector.IsRighterThanLeftWindowBound(this)
-                || !CollisionDetector.IsLefterThanRightWindowBound((this)))
-            {
-                this.IsReadyToDespawn(true);
-            }
-        }
-
         public override void Move()
         {
             if (this.owner != null)

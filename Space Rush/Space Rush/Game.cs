@@ -122,7 +122,7 @@ namespace Space_Rush
 
         public int GetNewID()
         {
-            return this.collidebleEntities.Count() + 1;
+            return this.entities.Count() + 1;
         }
 
         public Vector2d GetWindowSize()
@@ -167,17 +167,6 @@ namespace Space_Rush
             catch
             {
                 return;
-            }
-        }
-
-        public void DespawnOutOfWindowEntities()
-        {
-            for(int i = 0; i <  this.collidebleEntities.Count; i++)
-            {
-                if (!CollisionDetector.IsEntityCollideWitGameWindow(this.collidebleEntities[i]))
-                {
-                    this.DespawnEntity(this.collidebleEntities[i]);
-                }
             }
         }
 

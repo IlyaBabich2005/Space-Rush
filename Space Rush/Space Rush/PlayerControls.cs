@@ -22,23 +22,6 @@ namespace Space_Rush
         private Keys keyUseSkill;
         private Vector2d movementVector = new Vector2d(0,0);
 
-        public PlayerControls(Direction up, Direction down, Direction left, Direction right, 
-            Keys keyUp, Keys keyDown, Keys keyLeft, Keys keyRight, Keys keyShoot, Keys keyUseSkill)
-        {
-            this.up = up;
-            this.down = down;
-            this.left = left;
-            this.right = right;
-            this.lastDirection = null;
-            this.keyUp = keyUp;
-            this.keyDown = keyDown;
-            this.keyLeft = keyLeft;
-            this.keyRight = keyRight;
-            this.keyShoot = keyShoot;
-            this.keyUseSkill = keyUseSkill;
-            this.movementVector = new Vector2d(0, 0);
-        }
-
         public PlayerControls() { }
 
         public Vector2d GetMovementVector()

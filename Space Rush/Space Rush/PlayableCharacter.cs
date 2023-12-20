@@ -4,14 +4,7 @@ using System.Windows.Forms;
 namespace Space_Rush
 {
     public class PlayableCharacter : Ship
-    {
-        enum PlayerStatements
-        {
-            ROLL_RIGHT = 1,
-            ROLL_LEFT,
-            DIRECTLY
-        }
-
+    { 
         private string pathToLeftRollSprite;
         private string pathToRightRollSprite;
         private string pathToDirectlyPositionSprite;

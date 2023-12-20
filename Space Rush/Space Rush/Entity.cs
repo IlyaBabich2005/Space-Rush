@@ -10,8 +10,6 @@ namespace Space_Rush
 {
     public class Entity
     {
-        private bool is_debug = true;
-
         private PictureBox hitbox = null;
         private Vector2d velosity = new Vector2d(0,0);
         private int id = 0;
@@ -19,41 +17,8 @@ namespace Space_Rush
         private Vector2d maxVelosity = new Vector2d(0, 0);
         private bool isReadyToDespawn;
 
-        public Entity(string pathToTexture, Size hitboxSize, Vector2d startVelosity, Point startPosition, int id, Vector2d maxVelosity) 
-        {
-            this.hitbox = new PictureBox();
-            this.hitbox.Size = hitboxSize;
-            this.hitbox.Location = startPosition;
-            this.hitbox.Image = Image.FromFile(pathToTexture);
-            this.maxVelosity = maxVelosity;
-            this.velosity = startVelosity;
-            this.id = id;
-            this.isReadyToDespawn = false;
-
-#if DEBUG
-            this.hitbox.BorderStyle = BorderStyle.FixedSingle;
-#endif
-
-        }
-
-        public Entity(Size hitboxSize, Vector2d startVelosity, Point startPosition, int id, Vector2d maxVelosity)
-        {
-            this.hitbox = new PictureBox();
-            this.hitbox.Size = hitboxSize;
-            this.hitbox.Location = startPosition;
-            this.maxVelosity = maxVelosity;
-            this.velosity = startVelosity;
-            this.id = id;
-            this.isReadyToDespawn = false;
-
-#if DEBUG
-            this.hitbox.BorderStyle = BorderStyle.FixedSingle;
-#endif
-        }
-
         public Entity(Entity newEntity)
         {
-            this.is_debug = newEntity.is_debug;
             this.hitbox = new PictureBox();
             this.hitbox.Size = newEntity.hitbox.Size;
             this.hitbox.Location = newEntity.hitbox.Location;

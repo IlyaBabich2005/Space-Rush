@@ -23,20 +23,6 @@ namespace Space_Rush
         private float shootAngle;
         private string name = "";
 
-        public Weapon(float firerate, Alive projectile, int level, int maxLevel, WeaponTypes type, float levelUpCoficient, List<Vector2d> muzzles, int projectilesFromMuzzle, float shootAngle)
-        {
-            this.firerate = firerate;
-            this.projectile = projectile;
-            this.level = level;
-            this.maxLevel = maxLevel;
-            this.type = type;
-            this.levelUpCoficient = levelUpCoficient;
-            this.muzzles = muzzles;
-            this.timeOfLastShot = 0;
-            this.projectilesFromMuzzle = projectilesFromMuzzle;
-            this.shootAngle = shootAngle;
-        }
-
         public Weapon() { }
 
         public void SetFirerate(float firerate)
